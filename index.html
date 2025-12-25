@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MONKEEE Gesture Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4/hands.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.3/drawing_utils.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-gray-900 flex flex-col items-center justify-center min-h-screen m-0">
+
+  <h1 class="text-white text-2xl font-bold mb-4">MONKEEEEE</h1>
+
+  <div class="relative w-[700px] h-[480px] bg-black border-4 border-gray-700 rounded-lg shadow-2xl">
+    <video id="webcam" class="absolute inset-0 w-full h-full object-cover -scale-x-100" autoplay muted playsinline></video>
+    
+    <canvas id="output_canvas" class="absolute inset-0 w-full h-full z-10 pointer-events-none -scale-x-100"></canvas>
+
+    <img id="overlay-img" class="absolute top-5 right-5 w-32 z-20 transition-opacity duration-300" src="/normal.png" />
+    
+    <div id="Gesture-output-text" class="absolute bottom-5 left-5 z-30 text-white text-4xl font-black drop-shadow-md">
+      SEARCHING...
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
